@@ -1,7 +1,7 @@
 {
-  "name": "slack-service-runner",
+  "name": "super-service-runner",
   "version": "0.0.1",
-  "description": "slack-service-runner",
+  "description": "super-service-runner",
   "main": "start.js",
   "dependencies": {
     "auto-loader": "^0.2.0",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rohan-buchner/slack-service-runner.git"
+    "url": "git+ssh://git@github.com/rohan-buchner/super-service-runner.git"
   },
   "author": "Rohan Buchner",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rohan-buchner/slack-service-runner/issues"
+    "url": "https://github.com/rohan-buchner/super-service-runner/issues"
   },
-  "homepage": "https://github.com/rohan-buchner/slack-service-runner#readme"
+  "homepage": "https://github.com/rohan-buchner/super-service-runner#readme"
 }
