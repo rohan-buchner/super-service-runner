@@ -1,0 +1,19 @@
+{
+  "name": "e-sport-bot",
+  "version": "0.0.1",
+  "description": "e-sport slack bot with interactive hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rohan-buchner/e-sport-bot.git"
+  },
+  "author": "Rohan Buchner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohan-buchner/e-sport-bot/issues"
+  },
+  "homepage": "https://github.com/rohan-buchner/e-sport-bot#readme"
+}
