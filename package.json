@@ -11,10 +11,6 @@
     "request-promise": "^4.2.1",
     "slack-node": "^0.1.8"
   },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-serve": "^1.4.0"
-  },
   "scripts": {
     "test": "test"
   },
