@@ -1,8 +1,13 @@
-var services = require('auto-loader').load(__dirname +'/services')
+const autoLoader = require('auto-loader');
+const readYaml = require('read-yaml');
 
-console.log(services['dota2']);
+var services = autoLoader.load(__dirname +'/services')
 
-readYaml('config.yml', function(err, data) {
-  if (err) throw err;
-  console.log(data);
+readYaml('config.yml', function(err, conf) {
+
+	if (err) throw err;
+  	
+ 	Object.keys(conf).forEach(function (key) {
+   		services[key](conf[key])
+	});	
 });

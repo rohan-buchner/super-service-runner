@@ -1,4 +1,4 @@
 module.exports = function (config) {
-	console.log('dota2 entered!!');
+	console.log('foo entered!!');
   	console.log(config)
 }

@@ -1,0 +1,24 @@
+--- 
+dota2: 
+  dotabuff: www.dotabuff.com
+  steam: www.steam.com
+  team: 
+    - 
+      nickName: test1
+      slackId: 1
+      steamId: 1
+    - 
+      nickName: test2
+      slackId: 1
+      steamId: 1
+foo: 
+  url: www.foo.com
+  team: 
+    - 
+      nickName: bar1
+      bnetId: 1
+      eloId: 1
+    - 
+      nickName: baz1
+      bnetId: 
+      eloId: 1
