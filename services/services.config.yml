@@ -13,11 +13,21 @@ dota2:
       nickName: test2
       slackId: 1
       steamId: 1
-btc-watcher: 
+api-to-slack: 
   enabled: true
-  cron: "*/60 * * * * *"
-  rate: 
-    - XBTZAR
-  channels: 
-    - http://www.slack1.com
-    - http://www.slack2.com
+  cron: "*/10 * * * * *"
+  endpoints: 
+    - 
+      slack-url: http://www.slack1.com
+      username: BTCwatcher
+      uri: https://api.mybitx.com/api/1/ticker?pair=XBTZAR
+      map: luno.js
+      channel: "#cryprocurrency"
+      icon_emoji: ":aw_yeah:"
+    - 
+      slack-url: http://www.slack2.com
+      slack-username: BTCwatcher
+      uri: https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH,DASH,BTC,LTC,DOGE&tsyms=EUR
+      map: crypto-compare.js
+      channel: "#cryprocurrency"
+      icon_emoji: ":aw_yeah:"
