@@ -1,5 +1,6 @@
 --- 
 dota2: 
+  cron: 0 0/1 * 1/1 *
   dotabuff: www.dotabuff.com
   steam: www.steam.com
   team: 
@@ -12,6 +13,7 @@ dota2:
       slackId: 1
       steamId: 1
 foo: 
+  cron: 0 0/1 * 1/1 *
   url: www.foo.com
   team: 
     - 
