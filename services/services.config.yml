@@ -1,6 +1,6 @@
 --- 
 dota2: 
-  enabled: true
+  enabled: false
   cron: "*/15 * * * * *"
   dotabuff: www.dotabuff.com
   steam: www.steam.com
@@ -15,8 +15,9 @@ dota2:
       steamId: 1
 btc-watcher: 
   enabled: true
-  cron: "*/10 * * * * *"
-  rate: XBTZAR
+  cron: "*/60 * * * * *"
+  rate: 
+    - XBTZAR
   channels: 
     - http://www.slack1.com
     - http://www.slack2.com
