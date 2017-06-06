@@ -1,7 +1,7 @@
 {
-  "name": "e-sport-bot",
+  "name": "slack-service-runner",
   "version": "0.0.1",
-  "description": "e-sport slack bot with interactive hooks",
+  "description": "slack-service-runner",
   "main": "start.js",
   "dependencies": {
     "auto-loader": "^0.2.0",
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rohan-buchner/e-sport-bot.git"
+    "url": "git+ssh://git@github.com/rohan-buchner/slack-service-runner.git"
   },
   "author": "Rohan Buchner",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rohan-buchner/e-sport-bot/issues"
+    "url": "https://github.com/rohan-buchner/slack-service-runner/issues"
   },
-  "homepage": "https://github.com/rohan-buchner/e-sport-bot#readme"
+  "homepage": "https://github.com/rohan-buchner/slack-service-runner#readme"
 }
