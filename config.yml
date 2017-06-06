@@ -15,17 +15,11 @@ dota2:
       steamId: 1
 btc-watcher: 
   enabled: true
-  cron: "*/30 * * * * *"
+  cron: "*/10 * * * * *"
   rate: XBTZAR
   channels: 
-    - 
-      nickName: test1
-      slackId: 1
-      steamId: 1
-    - 
-      nickName: test2
-      slackId: 1
-      steamId: 1
+    - http://www.slack1.com
+    - http://www.slack2.com
 foo: 
   enabled: false
   cron: "*/10 * * * * *"

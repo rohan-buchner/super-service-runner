@@ -17,10 +17,14 @@ function getPairRate(pair) {
 	return rp(options);  
 };
 
-module.exports = function(config) {
-   getPairRate(config.rate)
-      .then(data => {
-         //slack.publish(data)
-         console.log(data)
-      })
- };
+module.exports = function (config) {
+
+	console.log('btc-watcher entered!!');
+  	console.log(config);
+
+	getPairRate(config.rate)
+    	.then(data => {
+        	//slack.publish(data)
+        	console.log(data)
+      	});
+};

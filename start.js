@@ -14,10 +14,16 @@ readYaml('config.yml', function(err, conf) {
 		if(!conf[key].enabled) { return; }
 
 		if(cron.validate(conf[key].cron)) {
- 			console.log('Creating CRON for ' + key);		
+ 			console.log('Creating CRON for ' + key);	
+ 			console.log('---------');	
 
-	 		cron.schedule(conf[key].cron, function(){
-	   			services[key](conf[key]);
+	 		cron.schedule(conf[key].cron, function() {
+
+				if (typeof services[key] === "function") {
+					services[key](conf[key]);
+				} else {
+					services[key][key](conf[key]);
+				}
 			});
 		} else {
 			console.log('CRON invalid for::' + key)
