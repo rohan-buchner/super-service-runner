@@ -3,6 +3,18 @@
   "version": "0.0.1",
   "description": "e-sport slack bot with interactive hooks",
   "main": "start.js",
+  "dependencies": {
+    "auto-loader": "^0.2.0",
+    "cron": "^1.2.1",
+    "read-yaml": "^1.1.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "slack-node": "^0.1.8"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-serve": "^1.4.0"
+  },
   "scripts": {
     "test": "test"
   },
