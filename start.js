@@ -10,19 +10,17 @@ readYaml('config.yml', function(err, conf) {
   	
  	Object.keys(conf).forEach(function (key) {
 
- 		console.log('Creating CRON for ' + key);
+ 		// if the service is disabled in the config, dont schedule it
+		if(!conf[key].enabled) { return; }
 
-		if(cron.validate(conf[key].cron)) {				
+		if(cron.validate(conf[key].cron)) {
+ 			console.log('Creating CRON for ' + key);		
 
-			console.log(conf[key].cron, '-> is valid cron');
-
-	 		var task = cron.schedule(conf[key].cron, function(){
+	 		cron.schedule(conf[key].cron, function(){
 	   			services[key](conf[key]);
 			});
-
 		} else {
-			console.log('Cron invalid for::' + key)
-		}
-
+			console.log('CRON invalid for::' + key)
+		}	
 	});	
 });

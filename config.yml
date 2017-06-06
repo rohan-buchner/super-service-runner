@@ -1,5 +1,6 @@
 --- 
 dota2: 
+  enabled: true
   cron: "*/10 * * * * *"
   dotabuff: www.dotabuff.com
   steam: www.steam.com
@@ -13,6 +14,7 @@ dota2:
       slackId: 1
       steamId: 1
 foo: 
+  enabled: false
   cron: "*/10 * * * * *"
   url: www.foo.com
   team: 
