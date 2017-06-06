@@ -2,7 +2,7 @@
   "name": "e-sport-bot",
   "version": "0.0.1",
   "description": "e-sport slack bot with interactive hooks",
-  "main": "index.js",
+  "main": "start.js",
   "scripts": {
     "test": "test"
   },
