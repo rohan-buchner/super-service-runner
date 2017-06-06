@@ -2,17 +2,6 @@
 dota2: 
   enabled: false
   cron: "*/15 * * * * *"
-  dotabuff: www.dotabuff.com
-  steam: www.steam.com
-  team: 
-    - 
-      nickName: test1
-      slackId: 1
-      steamId: 1
-    - 
-      nickName: test2
-      slackId: 1
-      steamId: 1
 api-to-slack: 
   enabled: true
   cron: "*/10 * * * * *"
@@ -29,5 +18,17 @@ api-to-slack:
       slack-username: BTCwatcher
       uri: https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH,DASH,BTC,LTC,DOGE&tsyms=EUR
       map: crypto-compare.js
+      channel: "#cryprocurrency"
+      icon_emoji: ":aw_yeah:"
+    - 
+      slack-url: http://www.slack2.com
+      slack-username: BTCwatcher
+      uri: https://jsonplaceholder.typicode.com/comments/10
+      channel: "#cryprocurrency"
+      icon_emoji: ":aw_yeah:"
+    - 
+      slack-url: http://www.slack2.com
+      slack-username: foo
+      uri: https://jsonplaceholder.typicode.com/comments/20
       channel: "#cryprocurrency"
       icon_emoji: ":aw_yeah:"

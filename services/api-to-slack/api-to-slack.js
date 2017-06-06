@@ -13,17 +13,32 @@ function get(uri) {
   return rp(options);  
 };
 
+function defaultMap(data) {
+  return {
+    text: data
+  }
+}
+
 module.exports = function (config) {
 
   config.endpoints.forEach(function(endpoint) {
 
       get(endpoint.uri)
         .then(data => {
-            var map = require('./maps/' + endpoint.map)
+            var output;
 
-            var output = Object.assign({}, endpoint, map(data));
+            if (endpoint.map !== undefined) {
+              var map = require('./maps/' + endpoint.map)
+              output = Object.assign({}, endpoint, map(data));
+            } else {
+              console.log('using default map');
+              output = Object.assign({}, endpoint, defaultMap(data));
+            }
+
             //slack.publish(data)
             console.log(output);
+            console.log('-----');
+            console.log('');
           });
   })
 };
