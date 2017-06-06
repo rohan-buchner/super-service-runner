@@ -1,8 +1,8 @@
 const autoLoader = require('auto-loader');
 const readYaml = require('read-yaml');
-const CronJob = require('cron').CronJob;
+const cron = require('node-cron');
 
-var services = autoLoader.load(__dirname +'/services')
+const services = autoLoader.load(__dirname +'/services')
 
 readYaml('config.yml', function(err, conf) {
 
@@ -11,20 +11,18 @@ readYaml('config.yml', function(err, conf) {
  	Object.keys(conf).forEach(function (key) {
 
  		console.log('Creating CRON for ' + key);
- 		
- 		new CronJob(conf[key].cron,
- 			// start hook
- 			function(data) {
-				console.log('start', data);
-   				services[key](conf[key]);
-			},
-			// end hook 
-			function(data) {
-				console.log('done', data)
-			}, 
-			// start now
-			true, 
-			// timezone
-			'America/Los_Angeles');  //TODO: get correct timesone
+
+		if(cron.validate(conf[key].cron)) {				
+
+			console.log(conf[key].cron, '-> is valid cron');
+
+	 		var task = cron.schedule(conf[key].cron, function(){
+	   			services[key](conf[key]);
+			});
+
+		} else {
+			console.log('Cron invalid for::' + key)
+		}
+
 	});	
 });
