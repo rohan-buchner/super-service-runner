@@ -19,7 +19,7 @@ function getPairRate(pair) {
 
 module.exports = function (config) {
 
-	console.log('btc-watcher entered!!');
+	console.log('btc-watcher entered');
   	console.log(config);
 
 	getPairRate(config.rate)

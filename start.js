@@ -20,8 +20,10 @@ readYaml('config.yml', function(err, conf) {
 	 		cron.schedule(conf[key].cron, function() {
 
 				if (typeof services[key] === "function") {
+					// top level entry
 					services[key](conf[key]);
 				} else {
+					// 2nd level entry. eg. in a folder
 					services[key][key](conf[key]);
 				}
 			});
