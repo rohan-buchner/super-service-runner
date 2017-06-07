@@ -1,4 +1,9 @@
-# How to add to this
+# A simple NodeJS based service loader & scheduler.
+
+Ever wanted to have multiple microservices run off of a single instance... then look no further.
+With SSR you easily do just that
+
+## How to
 
 Create either a single js file within the services folder... or create a sub folder named the SAME as your intended app entry. eg:
 
@@ -14,7 +19,7 @@ Your app entry should only export a single function which will be invoked by the
 ~~~
 foo: 
   enabled: true
-  cron: "*/15 * * * * *"
+  cron: "*/1 * * * * *"
 ~~~
 
 ...where in the above example foo is matches either the following by convention:
@@ -27,3 +32,7 @@ or
 ~~~
 services/foo/foo.js
 ~~~
+
+
+then run
+`node start.js`
