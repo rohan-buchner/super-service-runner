@@ -5,34 +5,39 @@ With SSR you easily do just that
 
 ## How to
 
-Create either a single js file within the services folder... or create a sub folder named the SAME as your intended app entry. eg:
+Create either a single js file within the services folder, or a sub folder named the SAME as your intended app entry. eg:
 
 ~~~
-services/bar.js
-services/bar/bar.js
+../super-service-runner/services/bar.js
+../super-service-runner/services/bar/bar.js
 ~~~
 
-Your app entry should only export a single function which will be invoked by the runner.
+(Reasoning being if you need sub modules for a specific service this will allow you to section of services within their own directory)
 
-`services.config.yml` should contain an entry for your service with the following at minimum. The properties you want to add to the config is dependent on your service requirements, but the sceduler itself only needs these:
-
-~~~
-foo: 
-  enabled: true
-  cron: "*/1 * * * * *"
-~~~
-
-...where in the above example foo is matches either the following by convention:
-~~~
-services/foo.js
-~~~
-
-or 
+Your service entry should only export a single function which will be invoked by the runner. This can be named or anonymous.
 
 ~~~
-services/foo/foo.js
+module.exports = function(config) {}
+// or
+module.exports = function start(config) {}
+~~~
+
+`services.config.yml` should contain an entry for your service (with the following at minimum). The properties you want to add to the config is dependent on your service requirements, but the scheduler itself only needs these:
+
+~~~
+foo:                       # matches your file name & or folder
+  enabled: true            # if enabled or not
+  cron: "*/1 * * * * *"    # cron schedule
+~~~
+
+...(again) in the above example foo is matches either the following by convention:
+
+~~~
+../super-service-runner/services/foo.js
+// or
+../super-service-runner/services/foo/foo.js
 ~~~
 
 
-then run
+To start run (in the console):
 `node start.js`
