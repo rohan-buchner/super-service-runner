@@ -5,14 +5,14 @@ With SSR you easily do just that
 
 ## How to
 
-Create either a single js file within the services folder, or a sub folder named the SAME as your intended app entry. eg:
+Create either a single js file within the services folder, or a sub folder named the **same** as your intended app entry. eg:
 
 ~~~
 ../super-service-runner/services/bar.js
 ../super-service-runner/services/bar/bar.js
 ~~~
 
-(Reasoning being if you need sub modules for a specific service this will allow you to section of services within their own directory)
+(Reason being if you need sub modules for a specific service, this will allow you to section off services, within their own directory)
 
 Your service entry should only export a single function which will be invoked by the runner. This can be named or anonymous.
 
