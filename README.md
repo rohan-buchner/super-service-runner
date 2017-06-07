@@ -17,9 +17,13 @@ Create either a single js file within the services folder, or a sub folder named
 Your service entry should only export a single function which will be invoked by the runner. This can be named or anonymous.
 
 ~~~
-module.exports = function(config) {}
+module.exports = function(config) {
+  // your code here
+}
 // or
-module.exports = function start(config) {}
+module.exports = function start(config) {
+  // your code here
+}
 ~~~
 
 `services.config.yml` should contain an entry for your service (with the following at minimum). The properties you want to add to the config is dependent on your service requirements, but the scheduler itself only needs these:
@@ -30,7 +34,7 @@ foo:                       # matches your file name & or folder
   cron: "*/1 * * * * *"    # cron schedule
 ~~~
 
-...(again) in the above example foo is matches either the following by convention:
+...(again) in the above example foo is matched either the following by convention:
 
 ~~~
 ../super-service-runner/services/foo.js
