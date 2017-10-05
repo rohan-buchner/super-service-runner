@@ -3,6 +3,8 @@
 Ever wanted to have multiple microservices run off of a single instance... then look no further.
 With SSR you easily do just that
 
+![david](https://david-dm.org/rohan-buchner/super-service-runner.svg)
+
 ## How to
 
 Create either a single js file within the services folder, or a sub folder named the **same** as your intended app entry. eg:
